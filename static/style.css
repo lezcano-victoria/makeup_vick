@@ -1,0 +1,77 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    background: #f8f9fa;
+}
+
+header {
+    background: #c79ec1b0;
+    color: #dd4cb9;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.card {
+    background: #c79ec1b0;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.precio {
+    font-size: 1.5rem;
+    color: #330433;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+.btn-agregar {
+    background: #dd4cb9;
+    color: black;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.flash {
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.flash.success { background: #86efac; color: #166534; }
+.flash.info { background: #bae6fd; color: #511663; }
+
+table {
+    width: 90%;
+    margin: 20px auto;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.btn-quitar, .btn-vaciar, .btn-volver {
+    padding: 8px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.btn-quitar { background: #e144ef; color: white; }
+.btn-vaciar { background: #f63bdd; color: white; }
+.btn-volver { background: #f63bdd; color: white; }

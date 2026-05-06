@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>🛒 Tu Carrito</h2>
+
+{% if carrito %}
+<table>
+    <thead>
+        <tr>
+            <th>Producto</th>
+            <th>Cantidad</th>
+            <th>Precio Unit.</th>
+            <th>Subtotal</th>
+            <th>Acción</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for item in carrito %}
+        <tr>
+            <td>{{ item.nombre }}</td>
+            <td>{{ item.cantidad }}</td>
+            <td>${{ item.precio }}</td>
+            <td>${{ item.precio * item.cantidad }}</td>
+            <td>
+                <a href="{{ url_for('quitar', id=item.id) }}" class="btn-quitar">Quitar</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+<h3>Total: ${{ total }}</h3>
+<a href="{{ url_for('vaciar') }}" class="btn-vaciar">Vaciar Carrito</a>
+{% else %}
+<p>El carrito está vacío 😢</p>
+{% endif %}
+
+<a href="{{ url_for('index') }}" class="btn-volver">← Volver al Menú</a>
+{% endblock %}
