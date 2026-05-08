@@ -38,23 +38,16 @@ Este proyecto es una **API RESTful** para una tienda de productos de maquillaje.
 ---
 
 ## 📁 Estructura del Proyecto
+```bash
 tp_parte_1
-├── app.py   
-|                 # Archivo principal (API + rutas web)
+├── app.py                # Archivo principal (API + rutas web)
 ├── templates/
-|   |
 │   ├── base.html
-|   |
 │   ├── index.html
-|   |
 │   ├── carrito.html
-|   |
 │   └── docs.html
-|
 ├── static/
-|   |
 │   └── style.css
-|
 └── README.md
 
 
